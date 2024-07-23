@@ -1,0 +1,344 @@
+# ========================================================================
+# THIS FILE IS A TEMPLATE, ANY MODIFICATIONS MADE HERE MAY NOT BE APPLIED.
+# ========================================================================
+# HOW TO CREATE CUSTOM LANGUAGE:
+#   1. Copy this file and name it eg. "en.yml"
+#   2. Change "language_name" property to eg. "english" and update "language" property inside config.yml to match this value.
+#   3. Modify contents to your liking.
+#   4. Reload the plugin using "/fancynpcs reload" command.
+# ========================================================================
+
+# Language name. This value can be used to specify "language" property in the config.yml file.
+language_name: rs
+
+# Messages support MiniMessage formatting: https://docs.advntr.dev/minimessage/format.html
+messages:
+  # Common (States)
+  true: "{successColor}True"
+  enabled: "{successColor}Enabled"
+  false: "{errorColor}False"
+  disabled: "{errorColor}Disabled"
+
+  # Common (Equipment Slots)
+  main_hand: "Main Hand"
+  off_hand: "Off Hand"
+  head: "Head"
+  chest: "Chest"
+  legs: "Legs"
+  feet: "Feet"
+
+  # Common (Availability)
+  unknown: "Unknown"
+  not_available: "N/A"
+
+  # Common (Colors)
+  color_black: "<dark_gray>Black"
+  color_dark_blue: "<dark_blue>Dark Blue"
+  color_dark_green: "<dark_green>Dark Green"
+  color_dark_aqua: "<dark_aqua>Dark Aqua"
+  color_dark_red: "<dark_red>Dark Red"
+  color_dark_purple: "<dark_purple>Dark Purple"
+  color_gold: "<gold>Gold"
+  color_gray: "<gray>Gray"
+  color_dark_gray: "<dark_gray>Dark Gray"
+  color_blue: "<blue>Blue"
+  color_green: "<green>Green"
+  color_aqua: "<aqua>Aqua"
+  color_red: "<red>Red"
+  color_light_purple: "<light_purple>Light Purple"
+  color_yellow: "<yellow>Yellow"
+  color_white: "<white>White"
+
+  # Common (Other)
+  interaction_on_cooldown: "<dark_gray>› {errorColor}Trenutno ste na cooldown-u. {warningColor}{time}{errorColor} preostalo."
+  player_npcs_cannot_modify_npc: "<dark_gray>› {errorColor}Možete modifikovati samo NPC-e koje posedujete."
+  player_npcs_cannot_move_npc: "<dark_gray>› {errorColor}Smeš da teleportuješ NPC samo na svoju parcelu."
+  player_npcs_create_failure_limit_reached: "<dark_gray>› {errorColor}Dostigli ste maksimalan broj NPC-a."
+  player_npcs_create_failure_not_owned_plot: "<dark_gray>› {errorColor}Možete kreirati NPC-e samo na svojoj parceli."
+
+  # Commands (Common Replies)
+  command_missing_permissions: "<dark_gray>› {errorColor}Nedovoljno dozvola. Ne možete koristiti ovu komandu."
+  command_wrong_usage: "<dark_gray>› {errorColor}Ova pod-komanda ne postoji. Koristi {warningColor}/npc help{errorColor} da vidiš dostupne komande."
+  command_incomplete_usage: "<dark_gray>› {errorColor}Nepotpuna komanda. Koristi {warningColor}/npc help{errorColor} da vidiš pravilnu sintaksu."
+  command_player_only: "<dark_gray>› {errorColor}Ova komanda može biti izvršena samo od strane igrača u igri."
+  command_invalid_boolean: "<dark_gray>› {errorColor}Argument {warningColor}{input}{errorColor} mora biti ili {warningColor}true{errorColor} ili {warningColor}false{errorColor}."
+  command_invalid_number: "<dark_gray>› {errorColor}Argument {warningColor}{input}{errorColor} nije validan broj."
+  command_invalid_location: "<dark_gray>› {errorColor}Argument {warningColor}{input}{errorColor} nije validna lokacija."
+  command_invalid_world: "<dark_gray>› {errorColor}Svet imenom {warningColor}{input}{errorColor} ne postoji ili nije učitan."
+  command_invalid_glowing_color: "<dark_gray>› {errorColor}Argument imenom {warningColor}{input}{errorColor} nije validna boja svetljenja."
+  command_invalid_list_sort_type: "<dark_gray>› {errorColor}Argument imenom {warningColor}{input}{errorColor} nije validan tip sortiranja."
+  command_invalid_nearby_sort_type: "<dark_gray>› {errorColor}Argument imenom {warningColor}{input}{errorColor} nije validan tip sortiranja."
+  command_invalid_entity_type: "<dark_gray>› {errorColor}Argument imenom {warningColor}{input}{errorColor} nije validan tip entiteta."
+  command_invalid_npc: "<dark_gray>› {errorColor}NPC {warningColor}{input}{errorColor} ne postoji."
+  command_invalid_material: "<dark_gray>› {errorColor}Argument {warningColor}{input}{errorColor} nije validan materijal."
+  command_invalid_attribute: "<dark_gray>› {errorColor}Navedena vrednost {warningColor}{input}{errorColor} nije validan atribut."
+  command_invalid_attribute_value: "<dark_gray>› {errorColor}Navedena vrednost {warningColor}{input}{errorColor} nije validna za ovaj atribut."
+  command_invalid_equipment_slot: "<dark_gray>› {errorColor}Argument {warningColor}{input}{errorColor} nije validan slot."
+  command_invalid_interval: "<dark_gray>› {errorColor}Argument {warningColor}{input}{errorColor} nije validan vremenski interval."
+  command_invalid_enum_generic: "<dark_gray>› {errorColor}Argument {warningColor}{input}{errorColor} nije validan {enum}."
+  command_unsupported_npc_type: "<dark_gray>› {errorColor}Ovaj tip NPC-a ne podržava ovu funkciju."
+  command_input_contains_blocked_command: "<dark_gray>› {errorColor}Ova komanda nije dozvoljena za upotrebu u interakcijama."
+  command_npc_modification_cancelled: "<dark_gray>› {errorColor}Modifikacija NPC-a je otkazana od strane API-a."
+
+  # Generic Syntax Message (syntax is provided by Cloud and may not be human-friendly)
+  command_invalid_syntax_generic: "<dark_gray>› <gray>Sintaksa: {warningColor}/{syntax}"
+
+  # Command Syntaxes
+  command_syntax:
+    fancynpcs: "<dark_gray>› <gray>Sintaksa: {primaryColor}/fancynpcs {secondaryColor}(version | reload | save | feature_flags)"
+    npc: "<dark_gray>› {errorColor}Nepoznata komanda. Koristi {warningColor}/npc help{errorColor} da vidiš dostupne komande."
+    npc_attribute: "<dark_gray>› <gray>Sintaksa: {primaryColor}/npc attribute {secondaryColor}(npc) {primaryColor}(set | list)"
+    npc_attribute_set: "<dark_gray>› <gray>Sintaksa: {primaryColor}/npc attribute {secondaryColor}(npc) {primaryColor}set {secondaryColor}(attribute) (value)"
+    npc_collidable: "<dark_gray>› <gray>Sintaksa: {primaryColor}/npc collidable {secondaryColor}(npc) (state)"
+    npc_copy: "<dark_gray>› <gray>Sintaksa: {primaryColor}/npc copy {secondaryColor}(npc) (new_name)"
+    npc_create: "<dark_gray>› <gray>Sintaksa: {primaryColor}/npc create {secondaryColor}(npc) [--type] [--position] [--world]"
+    npc_displayname: "<dark_gray>› <gray>Sintaksa: {primaryColor}/npc displayname {secondaryColor}(npc) (name)"
+    npc_equipment: "<dark_gray>› <gray>Sintaksa: {primaryColor}/npc equipment {secondaryColor}(npc) {primaryColor}(set | clear | list)"
+    npc_equipment_set: "<dark_gray>› <gray>Sintaksa: {primaryColor}/npc equipment {secondaryColor}(npc) {primaryColor}set {secondaryColor}(slot) (@hand | @none | item)"
+    npc_glowing: "<dark_gray>› <gray>Sintaksa: {primaryColor}/npc glowing {secondaryColor}(npc) (disabled | color)"
+    npc_info: "<dark_gray>› <gray>Sintaksa: {primaryColor}/npc info {secondaryColor}(npc)"
+    npc_interaction_cooldown: "<dark_gray>› <gray>Sintaksa: {primaryColor}/npc interaction_cooldown {secondaryColor}(npc) (disabled | time)"
+    npc_scale: "<dark_gray>› <gray>Sintaksa: {primaryColor}/npc scale {secondaryColor}(npc) (factor)"
+    npc_list: "<dark_gray>› <gray>Sintaksa: {primaryColor}/npc list {secondaryColor}[filters...]"
+    npc_message: "<dark_gray>› <gray>Sintaksa: {primaryColor}/npc message {secondaryColor}(npc) {primaryColor}(add | set | remove | clear | list | send_randomly)"
+    npc_message_add: "<dark_gray>› <gray>Sintaksa: {primaryColor}/npc message {secondaryColor}(npc) {primaryColor}add {secondaryColor}(@none | message)"
+    npc_message_remove: "<dark_gray>› <gray>Sintaksa: {primaryColor}/npc message {secondaryColor}(npc) {primaryColor}remove {secondaryColor}(number)"
+    npc_message_set: "<dark_gray>› <gray>Sintaksa: {primaryColor}/npc message {secondaryColor}(npc) {primaryColor}set {secondaryColor}(number) (@none | message)"
+    npc_message_send_randomly: "<dark_gray>› <gray>Sintaksa: {primaryColor}/npc message {secondaryColor}(npc) {primaryColor}send_randomly {secondaryColor}[state]"
+    npc_move_here: "<dark_gray>› <gray>Sintaksa: {primaryColor}/npc move_here {secondaryColor}(npc)"
+    npc_move_to: "<dark_gray>› <gray>Sintaksa: {primaryColor}/npc move_to {secondaryColor}(npc) (x) (y) (z) [world]"
+    npc_nearby: "<dark_gray>› <gray>Sintaksa: {primaryColor}/npc nearby {secondaryColor}[filters...]"
+    npc_player_command: "<dark_gray>› <gray>Sintaksa: {primaryColor}/npc player_command {secondaryColor}(npc) {primaryColor}(add | set | remove | clear | list)"
+    npc_player_command_add: "<dark_gray>› <gray>Sintaksa: {primaryColor}/npc player_command {secondaryColor}(npc) {primaryColor}add {secondaryColor}(command)"
+    npc_player_command_remove: "<dark_gray>› <gray>Sintaksa: {primaryColor}/npc player_command {secondaryColor}(npc) {primaryColor}remove {secondaryColor}(number)"
+    npc_player_command_set: "<dark_gray>› <gray>Sintaksa: {primaryColor}/npc player_command {secondaryColor}(npc) {primaryColor}set {secondaryColor}(number) (command)"
+    npc_server_command: "<dark_gray>› <gray>Sintaksa: {primaryColor}/npc server_command {secondaryColor}(npc) {primaryColor}(add | set | remove | clear | list)"
+    npc_server_command_add: "<dark_gray>› <gray>Sintaksa: {primaryColor}/npc server_command {secondaryColor}(npc) {primaryColor}add {secondaryColor}(command)"
+    npc_server_command_remove: "<dark_gray>› <gray>Sintaksa: {primaryColor}/npc server_command {secondaryColor}(npc) {primaryColor}remove {secondaryColor}(number)"
+    npc_server_command_set: "<dark_gray>› <gray>Sintaksa: {primaryColor}/npc server_command {secondaryColor}(npc) {primaryColor}set {secondaryColor}(number) (command)"
+    npc_remove: "<dark_gray>› <gray>Sintaksa: {primaryColor}/npc remove {secondaryColor}(npc)"
+    npc_show_in_tab: "<dark_gray>› <gray>Sintaksa: {primaryColor}/npc show_in_tab {secondaryColor}(npc) (state)"
+    npc_skin: "<dark_gray>› <gray>Sintaksa: {primaryColor}/npc skin {secondaryColor}(npc) (@none | @mirror | name | url)"
+    npc_teleport: "<dark_gray>› <gray>Sintaksa: {primaryColor}/npc teleport {secondaryColor}(npc)"
+    npc_turn_to_player: "<dark_gray>› <gray>Sintaksa: {primaryColor}/npc turn_to_player {secondaryColor}(npc) (state)"
+    npc_type: "<dark_gray>› <gray>Sintaksa: {primaryColor}/npc type {secondaryColor}(npc) (type)"
+
+  # Commands (fancynpcs)
+  fancynpcs_reload_success: "<dark_gray>› {successColor}Plugin je ponovo učitan."
+  fancynpcs_save_success: "<dark_gray>› {successColor}NPC-evi su sačuvani."
+  fancynpcs_feature_flags_header: "<dark_gray><st>-------------------</st>   <gray>Feature Flags  <dark_gray><st>------------------</st><newline>"
+  fancynpcs_feature_flags_entry: " <#848484>{number}. {warningColor}{name} <#848484>({id})<dark_gray>: {state}"
+  fancynpcs_feature_flags_footer: "<newline><dark_gray><st>-------------</st>  <gray>Prikazano ukupno {warningColor}{total_formatted}<gray> stavki  <dark_gray><st>-------------</st>"
+
+  # Commands (npc help)
+  npc_help_page_header: "<dark_gray><st>-------------</st>  {primaryColor}FancyNpcs<gray> Komande ({primaryColor}{page}<gray>/{primaryColor}{max_page}<gray>)  <dark_gray><st>--------------</st><newline>"
+  npc_help_page_footer: "<newline><dark_gray><st>-----------</st>  <gray>Klikni {primaryColor}<click:OPEN_URL:https://fancyplugins.de/docs/fn-commands.html>ovde</click><gray> za otvaranje dokumentacije  <dark_gray><st>-----------</st>"
+  npc_help_contents:
+    - "<dark_gray>› <hover:show_text:'<gray>Postavlja atribut NPC-a.'>{primaryColor}/npc attribute {secondaryColor}(npc) {primaryColor}set {secondaryColor}(attribute) (value)"
+    - "<dark_gray>› <hover:show_text:'<gray>Prikazuje sve modifikovane atribute NPC-a.'>{primaryColor}/npc attribute {secondaryColor}(npc) {primaryColor}list"
+    - "<dark_gray>› <hover:show_text:'<gray>Menja da li NPC može da se sudari sa drugim entitetima.'>{primaryColor}/npc collidable {secondaryColor}(npc) [state]"
+    - "<dark_gray>› <hover:show_text:'<gray>Kopira (duplira) navedeni NPC.'>{primaryColor}/npc copy {secondaryColor}(npc) (new_name)"
+    - "<dark_gray>› <hover:show_text:'<gray>Kreira novog NPC-a. Može se prilagoditi sa zastavicama.'>{primaryColor}/npc create {secondaryColor}(npc) [--type] [--location] [--world]"
+    - "<dark_gray>› <hover:show_text:'<gray>Menja prikazano ime NPC-a. Podržava MiniMessage, PlaceholderAPI i MiniPlaceholders.'>{primaryColor}/npc displayname {secondaryColor}(npc) (name)"
+    - "<dark_gray>› <hover:show_text:'<gray>Postavlja opremu NPC-a na predmet koji trenutno drži u glavnoj ruci, ni na šta ili na specifičan tip predmeta.'>{primaryColor}/npc equipment {secondaryColor}(npc) {primaryColor}set {secondaryColor}(slot) (@hand | @none | item)"
+    - "<dark_gray>› <hover:show_text:'<gray>Čisti sve slotove opreme NPC-a.'>{primaryColor}/npc equipment {secondaryColor}(npc) {primaryColor}clear"
+    - "<dark_gray>› <hover:show_text:'<gray>Prikazuje svu opremu NPC-a.'>{primaryColor}/npc equipment {secondaryColor}(npc) {primaryColor}list"
+    - "<dark_gray>› <hover:show_text:'<gray>Menja stanje svetljenja i boju NPC-a.'>{primaryColor}/npc glowing {secondaryColor}(npc) (disabled | color)"
+    - "<dark_gray>› <hover:show_text:'<gray>Prikazuje informacije o navedenom NPC-u.'>{primaryColor}/npc info {secondaryColor}(npc)"
+    - "<dark_gray>› <hover:show_text:'<gray>Menja trajanje između interakcija (cooldown) NPC-a.'>{primaryColor}/npc interaction_cooldown {secondaryColor}(npc) (disabled | time)"
+    - "<dark_gray>› <hover:show_text:'<gray>Menja skalu veličine NPC-a.'>{primaryColor}/npc scale {secondaryColor}(npc) (factor)"
+    - "<dark_gray>› <hover:show_text:'<gray>Prikazuje sve NPC-e u svim svetovima. Može se filtrirati i sortirati.'>{primaryColor}/npc list {secondaryColor}[--type] [--sort]"
+    - "<dark_gray>› <hover:show_text:'<gray>Dodaje novu poruku u listu. Podržava MiniMessage, PlaceholderAPI i MiniPlaceholders.<newline><newline><dark_gray>Poruke se prikazuju igraču prilikom interakcije sa NPC-om.'>{primaryColor}/npc message {secondaryColor}(npc) {primaryColor}add {secondaryColor}(@none | message)"
+    - "<dark_gray>› <hover:show_text:'<gray>Uklanja poruku na određenom indeksu.<newline><newline><dark_gray>Poruke se prikazuju igraču prilikom interakcije sa NPC-om.'>{primaryColor}/npc message {secondaryColor}(npc) {primaryColor}remove {secondaryColor}(number)"
+    - "<dark_gray>› <hover:show_text:'<gray>Menja poruku na određenom indeksu. Podržava MiniMessage, PlaceholderAPI i MiniPlaceholders.<newline><newline><dark_gray>Poruke se prikazuju igraču prilikom interakcije sa NPC-om.'>{primaryColor}/npc message {secondaryColor}(npc) {primaryColor}set {secondaryColor}(number) (@none | message)"
+    - "<dark_gray>› <hover:show_text:'<gray>Čisti sve pripojene poruke.<newline><newline><dark_gray>Poruke se prikazuju igraču prilikom interakcije sa NPC-om.'>{primaryColor}/npc message {secondaryColor}(npc) {primaryColor}clear"
+    - "<dark_gray>› <hover:show_text:'<gray>Prikazuje sve pripojene poruke.<newline><newline><dark_gray>Poruke se prikazuju igraču prilikom interakcije sa NPC-om.'>{primaryColor}/npc message {secondaryColor}(npc) {primaryColor}list"
+    - "<dark_gray>› <hover:show_text:'<gray>Menja da li poruke u listi treba da se šalju nasumično.<newline><newline><dark_gray>Poruke se prikazuju igraču prilikom interakcije sa NPC-om.'>{primaryColor}/npc message {secondaryColor}(npc) {primaryColor}send_randomly {secondaryColor}[state]"
+    - "<dark_gray>› <hover:show_text:'<gray>Teleports specified NPC to your location.'>{primaryColor}/npc move_here {secondaryColor}(npc)"
+    - "<dark_gray>› <hover:show_text:'<gray>Teleportuje NPC-a na određenu lokaciju.'>{primaryColor}/npc move_to {secondaryColor}(npc) (x) (y) (z) [world]"
+    - "<dark_gray>› <hover:show_text:'<gray>Prikazuje sve NPC-e u tvom svetu. Može se filtrirati i sortirati.'>{primaryColor}/npc nearby {secondaryColor}[--radius] [--type] [--sort]"
+    - "<dark_gray>› <hover:show_text:'<gray>Dodaje novu komandu u listu. Podržava PlaceholderAPI i MiniPlaceholders.<newline><newline><dark_gray>Komande se izvršavaju od strane igrača prilikom interakcije sa NPC-om.'>{primaryColor}/npc player_command {secondaryColor}(npc) {primaryColor}add {secondaryColor}(command)"
+    - "<dark_gray>› <hover:show_text:'<gray>Uklanja komandu na određenom indeksu.<newline><newline><dark_gray>Komande se izvršavaju od strane igrača prilikom interakcije sa NPC-om.<newline><newline>'>{primaryColor}/npc player_command {secondaryColor}(npc) {primaryColor}remove {secondaryColor}(number)"
+    - "<dark_gray>› <hover:show_text:'<gray>Menja komandu na određenom indeksu. Podržava PlaceholderAPI i MiniPlaceholders.<newline><newline><dark_gray>Komande se izvršavaju od strane igrača prilikom interakcije sa NPC-om.'>{primaryColor}/npc player_command {secondaryColor}(npc) {primaryColor}set {secondaryColor}(number) (command)"
+    - "<dark_gray>› <hover:show_text:'<gray>Čisti sve pripojene komande igrača.<newline><newline><dark_gray>Komande se izvršavaju od strane igrača prilikom interakcije sa NPC-om.'>{primaryColor}/npc player_command {secondaryColor}(npc) {primaryColor}clear"
+    - "<dark_gray>› <hover:show_text:'<gray>Prikazuje sve pripojene komande igrača.<newline><newline><dark_gray>Komande se izvršavaju od strane igrača prilikom interakcije sa NPC-om.'>{primaryColor}/npc player_command {secondaryColor}(npc) {primaryColor}list"
+    - "<dark_gray>› <hover:show_text:'<gray>Uklanja (briše) navedeni NPC.'>{primaryColor}/npc remove {secondaryColor}(npc)"
+    - "<dark_gray>› <hover:show_text:'<gray>Dodaje novu komandu u listu.<newline><newline><dark_gray>Komande se izvršavaju od strane konzole prilikom interakcije sa NPC-om.'>{primaryColor}/npc server_command {secondaryColor}(npc) {primaryColor}add {secondaryColor}(command)"
+    - "<dark_gray>› <hover:show_text:'<gray>Uklanja komandu na određenom indeksu.<newline><newline><dark_gray>Komande se izvršavaju od strane konzole prilikom interakcije sa NPC-om.'>{primaryColor}/npc server_command {secondaryColor}(npc) {primaryColor}remove {secondaryColor}(number)"
+    - "<dark_gray>› <hover:show_text:'<gray>Menja komandu na određenom indeksu.<newline><newline><dark_gray>Komande se izvršavaju od strane konzole prilikom interakcije sa NPC-om.'>{primaryColor}/npc server_command {secondaryColor}(npc) {primaryColor}set {secondaryColor}(number) (command)"
+    - "<dark_gray>› <hover:show_text:'<gray>Čisti sve pripojene komande konzole.<newline><newline><dark_gray>Komande se izvršavaju od strane konzole prilikom interakcije sa NPC-om.'>{primaryColor}/npc server_command {secondaryColor}(npc) {primaryColor}clear"
+    - "<dark_gray>› <hover:show_text:'<gray>Prikazuje sve pripojene komande konzole.<newline><newline><dark_gray>Komande se izvršavaju od strane konzole prilikom interakcije sa NPC-om.'>{primaryColor}/npc server_command {secondaryColor}(npc) {primaryColor}list"
+    - "<dark_gray>› <hover:show_text:'<gray>Menja da li se NPC prikazuje na listi igrača. Ovo funkcioniše samo za NPC-e tipa PLAYER.<newline><newline>{errorColor}Možda će biti potrebno ponovno povezivanje sa serverom da bi promene stupile na snagu.'>{primaryColor}/npc show_in_tab {secondaryColor}(npc) (state)"
+    - "<dark_gray>› <hover:show_text:'<gray>Menja kožu NPC-a.<newline><newline>{warningColor}@none <dark_gray>- <gray>uklanja kožu<newline>{warningColor}@mirror <dark_gray>- <gray>ogledalo kože igrača<newline>{warningColor}(name) <dark_gray>- <gray>ime bilo kog igrača<newline>{warningColor}(url) <dark_gray>- <gray>url teksture kože'>{primaryColor}/npc skin {secondaryColor}(npc) (@none | @mirror | name | url)"
+    - "<dark_gray>› <hover:show_text:'<gray>Teleportuje te do navedenog NPC-a.'>{primaryColor}/npc teleport {secondaryColor}(npc)"
+    - "<dark_gray>› <hover:show_text:'<gray>Menja da li NPC treba da se okrene ka igraču kada je u dometu.'>{primaryColor}/npc turn_to_player {secondaryColor}(npc) (state)"
+    - "<dark_gray>› <hover:show_text:'<gray>Menja tip NPC-a.'>{primaryColor}/npc type {secondaryColor}(npc) (type)"
+
+  # Commands (npc attribute)
+  npc_attribute_set: "<dark_gray>› <gray>Atribut {warningColor}{attribute}<gray> je postavljen na {warningColor}{value}<gray>."
+  npc_attribute_set_invalid_for_this_entity_type: "<dark_gray>› {errorColor}Atribut {warningColor}{input}{errorColor} nije validan atribut za ovaj tip entiteta."
+  npc_attribute_list_header: "<dark_gray><st>--------------------</st>  <gray>Atributi  <dark_gray><st>--------------------</st><newline>"
+  npc_attribute_list_entry: " <dark_gray>› <#848484>{attribute}<dark_gray>: {warningColor}{value}"
+  npc_attribute_list_footer: "<newline><dark_gray><st>---------------------------------------------------</st>"
+  npc_attribute_list_failure_empty: "<dark_gray>› {errorColor}Nema postavljenih atributa. Koristi {warningColor}/npc attribute (npc) set (attribute) (value){errorColor} da postaviš atribut."
+
+  # Commands (npc collidable)
+  npc_collidable_set_true: "<dark_gray>› <gray>NPC {warningColor}{npc}<gray> sada može da se sudari<gray>."
+  npc_collidable_set_false: "<dark_gray>› <gray>NPC {warningColor}{npc}<gray> više ne može da se sudari<gray>."
+
+  # Commands (npc copy)
+  npc_copy_success: "<dark_gray>› <gray>NPC {warningColor}{npc}<gray> je kopiran kao {warningColor}{new_npc}<gray>."
+
+  # Commands (npc create)
+  npc_create_success: "<dark_gray>› <gray>NPC {warningColor}{npc}<gray> je kreiran."
+  npc_create_failure_invalid_name: "<dark_gray>› {errorColor}Ime sadrži nedozvoljene karaktere. Dozvoljeni su samo karakteri [{warningColor}A-Z{errorColor}, {warningColor}a-z{errorColor}, {warningColor}0-9{errorColor}, {warningColor}_{errorColor}, {warningColor}-{errorColor}, {warningColor}/{errorColor}]."
+  npc_create_failure_already_exists: "<dark_gray>› {errorColor}NPC {warningColor}{npc}{errorColor} već postoji."
+  npc_create_failure_must_specify_world: "<dark_gray>› {errorColor}Morate navesti zastavicu {warningColor}--world{errorColor} kada izvršavate ovu komandu iz konzole."
+
+  # Commands (npc displayname)
+  npc_displayname_set_name: "<dark_gray>› <gray>NPC {warningColor}{npc}<gray> sada koristi <reset>{name}<reset><gray> kao prikazano ime."
+  npc_displayname_set_empty: "<dark_gray>› <gray>NPC {warningColor}{npc}<gray> više ne prikazuje ime."
+
+  # Commands (npc equipment)
+  npc_equipment_set_item: "<dark_gray>› <gray>Slot opreme {warningColor}{slot}<gray> je postavljen na <reset><item><gray>."
+  npc_equipment_set_empty: "<dark_gray>› <gray>Slot opreme {warningColor}{slot}<gray> je uklonjen."
+  npc_equipment_set_failure_invalid_slot: "<dark_gray>› {errorColor}Argument {warningColor}{input}{errorColor} nije validan slot opreme."
+  npc_equipment_clear_success: "<dark_gray>› <gray>Oprema je očišćena."
+  npc_equipment_list_header: "<dark_gray><st>--------------------</st>  <gray>Oprema  <dark_gray><st>--------------------</st><newline>"
+  npc_equipment_list_entry: " <#848484>{slot}<dark_gray>: <reset><item>"
+  npc_equipment_list_footer: "<newline><dark_gray><st>---------------------------------------------------</st>"
+  npc_equipment_list_failure_empty: "<dark_gray>› {errorColor}Nema postavljenih slotova opreme. Koristi {warningColor}/npc equipment (npc) set (slot) (@hand | @none | material){errorColor} da postaviš slot opreme."
+
+  # Commands (npc fix)
+  npc_fix_success: "<dark_gray>› <gray>Pokušaj popravke NPC-a {warningColor}{npc}<gray>... Još uvek imaš problema? Javi nam."
+
+  # Commands (npc glowing)
+  npc_glowing_set_true: "<dark_gray>› <gray>NPC {warningColor}{npc}<gray> sada svetli."
+  npc_glowing_set_false: "<dark_gray>› <gray>NPC {warningColor}{npc}<gray> više ne svetli."
+  npc_glowing_set_color_success: "<dark_gray>› <gray>NPC {warningColor}{npc}<gray> sada svetli u boji {color}<gray>."
+  npc_glowing_set_color_failure_invalid_color: "<dark_gray>› {errorColor}Navedena vrednost {warningColor}{input}{errorColor} nije validna boja."
+
+  # Commands (npc info)
+  npc_info_general:
+    - ""
+    - "<dark_gray>› <hover:show_text:'<gray>Jedinstveni, trajni identifikator NPC-a.'><#848484>Identifikator</hover>: <hover:show_text:'<gray>Klikni da kopiraš UUID u clipboard.'><click:copy_to_clipboard:'{id}'>{warningColor}{id}</click></hover>"
+    - "<dark_gray>› <hover:show_text:'<gray>Identifikator igrača koji je kreirao ovog NPC-a.'><gray>Kreator</hover>: <hover:show_text:'<gray>Klikni da kopiraš UUID kreatora u clipboard.'><click:copy_to_clipboard:'{creator_uuid}'>{warningColor}{creator_uuid_short}<gray> ({creator_name})</click></hover>"
+    - "<dark_gray>› <hover:show_text:'<gray>Ime NPC-a, korišćeno u komandama i prikazano iznad njihove glave ako prikazano ime nije postavljeno.'><#848484>Ime</hover>: {warningColor}{name}"
+    - "<dark_gray>› <hover:show_text:'<gray>Prikazano ime NPC-a, prikazano iznad njihove glave.'><gray>Prikazano Ime</hover>: <reset>{displayname}<reset>"
+    - "<dark_gray>› <hover:show_text:'<gray>Tip entiteta NPC-a.'><#848484>Tip</hover><dark_gray>: {warningColor}{type}"
+    - "<dark_gray>› <hover:show_text:'<gray>Trenutna lokacija NPC-a.'><gray>Lokacija</hover>: <hover:show_text:'<gray>Klikni da kopiraš lokaciju u clipboard.'><click:copy_to_clipboard:'{location_x} {location_y} {location_z}'>{warningColor}{location_x}<gray>, {warningColor}{location_y}<gray>, {warningColor}{location_z}<gray> u {warningColor}{world}</click></hover>"
+    - "<dark_gray>› <hover:show_text:'<gray>Stanje svetljenja NPC-a. Može biti {warningColor}color<gray> ili {errorColor}disabled<gray>.'><#848484>Svetli</hover><dark_gray>: {glow}"
+    - "<dark_gray>› <hover:show_text:'<gray>Da li NPC treba da se okrene ka igraču. Može biti {successColor}true<gray> ili {errorColor}false<gray>.'><gray>Okreće se ka igraču</hover><dark_gray>: {is_turn_to_player}"
+    - "<dark_gray>› <hover:show_text:'<gray>Da li NPC treba da se prikazuje na listi igrača. Može biti {successColor}true<gray> ili {errorColor}false<gray>.'><#848484>Prikazan u TAB-u</hover>: {is_show_in_tab}"
+    - "<dark_gray>› <hover:show_text:'<gray>Stanje sudara NPC-a. Može biti {successColor}true<gray> ili {errorColor}false<gray>.'><gray>Sudariv</hover><dark_gray>: {is_collidable}"
+    - "<dark_gray>› <hover:show_text:'<gray>Stanje ogledanja kože NPC-a. Može biti {successColor}true<gray> ili {errorColor}false<gray>.'><#848484>Ogledanje Kože</hover><dark_gray>: {warningColor}{is_skin_mirror}"
+    - "<dark_gray>› <hover:show_text:'<gray>Cooldown između interakcija.'><gray>Cooldown Interakcije</hover><dark_gray>: {warningColor}{interaction_cooldown}"
+    - "<dark_gray>› <hover:show_text:'<gray>Faktor skale za veličinu NPC-a.'><#848484>Skala</hover><dark_gray>: {warningColor}x{scale}"
+    - ""
+    - "<dark_gray>› <hover:show_text:'<gray>Klikni ovde da pretražiš opremu.'><gray>Oprema</hover><dark_gray>: <click:RUN_COMMAND:'/npc equipment {name} list'>{warningColor}[Klikni Ovde]</click>"
+    - "<dark_gray>› <hover:show_text:'<gray>Klikni ovde da pretražiš atribute.'><#848484>Atributi</hover><dark_gray>: <click:RUN_COMMAND:'/npc attribute {name} list'>{warningColor}[Klikni Ovde]</click>"
+    - "<dark_gray>› <hover:show_text:'<gray>Klikni ovde da pretražiš listu poruka.'><gray>Poruke</hover><dark_gray>: <click:RUN_COMMAND:'/npc message {name} list'>{warningColor}[Klikni Ovde]</click> <dark_gray>({messages_total} ukupno)"
+    - "<dark_gray>› <hover:show_text:'<gray>Klikni ovde da pretražiš listu komandi igrača.'><#848484>Komande Igrača</hover><dark_gray>: <click:RUN_COMMAND:'/npc player_command {name} list'>{warningColor}[Klikni Ovde]</click> <dark_gray>({player_commands_total} ukupno)"
+    - "<dark_gray>› <hover:show_text:'<gray>Klikni ovde da pretražiš listu komandi konzole.'><gray>Komande Konzole</hover><dark_gray>: <click:RUN_COMMAND:'/npc server_command {name} list'>{warningColor}[Klikni Ovde]</click> <dark_gray>({server_commands_total} ukupno)"
+    - ""
+    - "<dark_gray>› {primaryColor}Ne možeš da pronađeš šta tražiš?"
+    - "<dark_gray>› <gray>Otvori prozor za ćaskanje da vidiš sve informacije."
+    - ""
+
+  # Commands (npc interaction_cooldown)
+  npc_interaction_cooldown_set: "<dark_gray>› <gray>Cooldown interakcije je postavljen na {warningColor}{time}<gray>."
+  npc_interaction_cooldown_disabled: "<dark_gray>› <gray>Cooldown interakcije je onemogućen."
+
+  # Commands (scale)
+  npc_scale_set_success: "<dark_gray>› <gray>NPC {warningColor}{npc}<gray> je skaliran na {warningColor}{scale}<gray>."
+
+  # Commands (npc list)
+  npc_list_header: "<dark_gray><st>------------------</st>  <gray>Rezultat Upita Liste  <dark_gray><st>------------------</st><newline>"
+  npc_list_entry: " <#848484>{number}. <click:RUN_COMMAND:'/npc info {npc}'><hover:show_text:'<gray>Klikni da vidiš više detalja.'>{warningColor}{npc}</hover></click> <click:RUN_COMMAND:'/npc teleport {npc}'><hover:show_text:'<gray>Klikni da se teleportuješ.'><#848484>({location_x}, {location_y}, {location_z} u {world})"
+  npc_list_footer: "<newline><dark_gray><st>----------</st>  <gray>Prikazano {warningColor}{count_formatted}<gray> od ukupno {warningColor}{total_formatted}<gray> stavki  <dark_gray><st>----------</st>"
+  npc_list_failure_sort_requires_player: "<dark_gray>› {errorColor}Ovaj tip sortiranja se ne može koristiti iz konzole."
+  npc_list_failure_requires_world_flag: "<dark_gray>› {errorColor}Morate navesti zastavicu {warningColor}--world{errorColor} kada izvršavate ovu komandu iz konzole."
+
+  # Commands (npc message)
+  npc_message_add_success: "<dark_gray>› <gray>Poruka je dodata. Ima {warningColor}{total}<gray> poruka ukupno."
+  npc_message_set_success: "<dark_gray>› <gray>Poruka {warningColor}{number}<gray> je ažurirana. Ima {warningColor}{total}<gray> poruka ukupno."
+  npc_message_set_failure_not_in_range: "<dark_gray>› {errorColor}Broj {warningColor}{input}{errorColor} mora biti u opsegu između {warningColor}1{errorColor} i {warningColor}{max}{errorColor}."
+  npc_message_set_failure_list_is_empty: "<dark_gray>› {errorColor}Nema poruka na listi. Koristi {warningColor}/npc message (npc) add (none | message){errorColor} da dodaš svoju prvu poruku."
+  npc_message_remove_success: "<dark_gray>› <gray>Poruka {warningColor}{number}<gray> je uklonjena. Ima {warningColor}{total}<gray> poruka ukupno."
+  npc_message_remove_failure_not_in_range: "<dark_gray>› {errorColor}Broj {warningColor}{input}{errorColor} mora biti u opsegu između {warningColor}1{errorColor} i {warningColor}{max}{errorColor}."
+  npc_message_remove_failure_list_is_empty: "<dark_gray>› {errorColor}Nema poruka na listi. Koristi {warningColor}/npc message (npc) add (none | message){errorColor} da dodaš svoju prvu poruku."
+  npc_message_clear_success: "<dark_gray>› <gray>Poruke su očišćene. Bilo je {warningColor}{total}<gray> poruka ukupno."
+  npc_message_send_randomly_set_true: "<dark_gray>› <gray>NPC {warningColor}{npc}<gray> sada nasumično šalje poruke."
+  npc_message_send_randomly_set_false: "<dark_gray>› <gray>NPC {warningColor}{npc}<gray> više ne šalje poruke nasumično."
+  npc_message_list_header: "<dark_gray><st>---------------------</st>   <gray>Poruke  <dark_gray><st>--------------------</st><newline>"
+  npc_message_list_entry: " <#848484>{number}. <reset>{message}"
+  npc_message_list_footer: "<newline><dark_gray><st>-------------</st>  <gray>Prikazano ukupno {warningColor}{total_formatted}<gray> stavki  <dark_gray><st>-------------</st>"
+  npc_message_list_failure_empty: "<dark_gray>› {errorColor}Nema poruka na listi. Koristi {warningColor}/npc message (npc) add (none | message){errorColor} da dodaš svoju prvu poruku."
+
+  # Commands (npc move_here)
+  npc_move_here_success: "<dark_gray>› <gray>NPC {warningColor}{npc}<gray> je pomeren na tvoju lokaciju."
+
+  # Commands (npc move_to)
+  npc_move_to_success: "<dark_gray>› <gray>NPC {warningColor}{npc}<gray> je pomeren na {warningColor}{x}<gray>, {warningColor}{y}<gray>, {warningColor}{z}<gray> u {warningColor}{world}<gray>."
+  npc_move_to_failure_must_specify_world: "<dark_gray>› {errorColor}Morate navesti svet kada izvršavate ovu komandu iz konzole."
+
+  # Commands (npc nearby)
+  npc_nearby_header: "<dark_gray><st>----------------</st>  <gray>Rezultat Upita Blizine  <dark_gray><st>-----------------</st><newline>"
+  npc_nearby_entry: " <#848484>{number}. <click:RUN_COMMAND:'/npc info {npc}'><hover:show_text:'<gray>Klikni da vidiš više detalja.'>{warningColor}{npc}</hover></click> <click:RUN_COMMAND:'/npc teleport {npc}'><hover:show_text:'<gray>Klikni da se teleportuješ.'><#848484>({distance} blokova udaljeno)</hover></click>"
+  npc_nearby_footer: "<newline><dark_gray><st>----------</st>  <gray>Prikazano {warningColor}{count_formatted}<gray> od ukupno {warningColor}{total_formatted}<gray> stavki  <dark_gray><st>----------</st>"
+
+  # Commands (npc player_command)
+  npc_player_command_add_success: "<dark_gray>› <gray>Komanda je dodata. Ima {warningColor}{total}<gray> komandi ukupno."
+  npc_player_command_set_success: "<dark_gray>› <gray>Komanda {warningColor}{number}<gray> je ažurirana. Ima {warningColor}{total}<gray> komandi ukupno."
+  npc_player_command_set_failure_not_in_range: "<dark_gray>› {errorColor}Broj {warningColor}{input}{errorColor} mora biti u opsegu između {warningColor}1{errorColor} i {warningColor}{max}{errorColor}."
+  npc_player_command_set_failure_list_is_empty: "<dark_gray>› {errorColor}Nema komandi na listi. Koristi {warningColor}/npc player_command (npc) add (command){errorColor} da dodaš svoju prvu komandu."
+  npc_player_command_remove_success: "<dark_gray>› <gray>Komanda {warningColor}{number}<gray> je uklonjena. Ima {warningColor}{total}<gray> komandi ukupno."
+  npc_player_command_remove_failure_not_in_range: "<dark_gray>› {errorColor}Broj {warningColor}{input}{errorColor} mora biti u opsegu između {warningColor}1{errorColor} i {warningColor}{max}{errorColor}."
+  npc_player_command_remove_failure_list_is_empty: "<dark_gray>› {errorColor}Nema komandi na listi. Koristi {warningColor}/npc player_command (npc) add (command){errorColor} da dodaš svoju prvu komandu."
+  npc_player_command_clear_success: "<dark_gray>› <gray>Komande su očišćene. Bilo je {warningColor}{total}<gray> komandi ukupno."
+  npc_player_command_list_header: "<dark_gray><st>------------------</st>   <gray>Komande Igrača  <dark_gray><st>-----------------</st><newline>"
+  npc_player_command_list_entry: " <#848484>{number}. <reset>{command}"
+  npc_player_command_list_footer: "<newline><dark_gray><st>-------------</st>  <gray>Prikazano ukupno {warningColor}{total_formatted}<gray> stavki  <dark_gray><st>-------------</st>"
+  npc_player_command_list_failure_empty: "<dark_gray>› {errorColor}Nema komandi na listi. Koristi {warningColor}/npc player_command (npc) add (command){errorColor} da dodaš svoju prvu komandu."
+
+  # Commands (npc remove)
+  npc_remove_success: "<dark_gray>› <gray>NPC {warningColor}{npc}<gray> je uklonjen."
+
+  # Commands (npc server_command)
+  npc_server_command_add_success: "<dark_gray>› <gray>Komanda je dodata. Ima {warningColor}{total}<gray> komandi ukupno."
+  npc_server_command_set_success: "<dark_gray>› <gray>Komanda {warningColor}{number}<gray> je ažurirana. Ima {warningColor}{total}<gray> komandi ukupno."
+  npc_server_command_set_failure_not_in_range: "<dark_gray>› {errorColor}Broj {warningColor}{input}{errorColor} mora biti u opsegu između {warningColor}1{errorColor} i {warningColor}{max}{errorColor}."
+  npc_server_command_set_failure_list_is_empty: "<dark_gray>› {errorColor}Nema komandi na listi. Koristi {warningColor}/npc server_command (npc) add (command){errorColor} da dodaš svoju prvu komandu."
+  npc_server_command_remove_success: "<dark_gray>› <gray>Komanda {warningColor}{number}<gray> je uklonjena. Ima {warningColor}{total}<gray> komandi ukupno."
+  npc_server_command_remove_failure_not_in_range: "<dark_gray>› {errorColor}Broj {warningColor}{input}{errorColor} mora biti u opsegu između {warningColor}1{errorColor} i {warningColor}{max}{errorColor}."
+  npc_server_command_remove_failure_list_is_empty: "<dark_gray>› {errorColor}Nema komandi na listi. Koristi {warningColor}/npc server_command (npc) add (command){errorColor} da dodaš svoju prvu komandu."
+  npc_server_command_clear_success: "<dark_gray>› <gray>Komande su očišćene. Bilo je {warningColor}{total}<gray> komandi ukupno."
+  npc_server_command_list_header: "<dark_gray><st>------------------</st>  <gray>Komande Servera  <dark_gray><st>-----------------</st><newline>"
+  npc_server_command_list_entry: " <#848484>{number}. <reset>{command}"
+  npc_server_command_list_footer: "<newline><dark_gray><st>-------------</st>  <gray>Prikazano ukupno {warningColor}{total_formatted}<gray> stavki  <dark_gray><st>-------------</st>"
+  npc_server_command_list_failure_empty: "<dark_gray>› {errorColor}Nema komandi na listi. Koristi {warningColor}/npc server_command (npc) add (command){errorColor} da dodaš svoju prvu komandu."
+
+  # Commands (npc show_in_tab)
+  npc_show_in_tab_set_true: "<dark_gray>› <gray>NPC {warningColor}{npc}<gray> je sada prikazan na listi igrača."
+  npc_show_in_tab_set_false: "<dark_gray>› <gray>NPC {warningColor}{npc}<gray> više nije prikazan na listi igrača."
+
+  # Commands (npc skin)
+  npc_skin_set_name: "<dark_gray>› <gray>NPC {warningColor}{npc}<gray> sada koristi kožu {warningColor}{name}<gray>."
+  npc_skin_set_url: "<dark_gray>› <gray>NPC {warningColor}{npc}<gray> sada koristi kožu sa navedenog URL-a."
+  npc_skin_set_mirror: "<dark_gray>› <gray>NPC {warningColor}{npc}<gray> sada ogleda kožu igrača."
+  npc_skin_set_none: "<dark_gray>› <gray>NPC {warningColor}{npc}<gray> više ne koristi nikakvu kožu."
+  npc_skin_failure_invalid_url: "<dark_gray>› {errorColor}Argument {warningColor}{input}{errorColor} je nevalidan ili nepodržan URL."
+  npc_skin_failure_invalid_name_or_url: "<dark_gray>› {errorColor}Argument {warningColor}{input}{errorColor} nije validno ime igrača ili URL."
+  npc_skin_failure_invalid_name_or_rate_limit: "<dark_gray>› {errorColor}Nije moguće pronaći kožu za {warningColor}{input}{errorColor}. Ili nalog ne postoji ili ste dostigli ograničenje zahteva."
+
+  # Commands (npc teleport)
+  npc_teleport_success: "<dark_gray>› <gray>Teleported ste do NPC-a {warningColor}{npc}<gray>."
+  npc_teleport_failure_exception: "<dark_gray>› {errorColor}Došlo je do greške prilikom pokušaja teleportacije do NPC-a. Proveri konzolu za greške."
+  npc_teleport_failure_world_not_loaded: "<dark_gray>› {errorColor}Došlo je do greške prilikom pokušaja teleportacije do NPC-a. Ciljani svet nije učitan."
+
+  # Commands (npc turn_to_player)
+  npc_turn_to_player_set_true: "<dark_gray>› <gray>NPC {warningColor}{npc}<gray> sada se okreće ka igraču."
+  npc_turn_to_player_set_false: "<dark_gray>› <gray>NPC {warningColor}{npc}<gray> više se ne okreće ka igraču."
+
+  # Commands (npc type)
+  npc_type_success: "<dark_gray>› <gray>Tip NPC-a {warningColor}{npc}<gray> je promenjen u {warningColor}{type}<gray>."
